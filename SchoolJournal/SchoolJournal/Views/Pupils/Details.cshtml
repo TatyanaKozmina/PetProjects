@@ -1,0 +1,40 @@
+﻿@model SchoolJournal.Models.DB.Pupil
+
+@{
+    ViewData["Title"] = "Школьный журнал";
+}
+
+<h1>Оценки</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+    <hr />
+    @if (User.HasClaim(c => c.Type == System.Security.Claims.ClaimTypes.Email && c.Value == @Model.Email)
+    || User.IsInRole("admin"))
+    {
+        @await Html.PartialAsync("_JournalRecords", @Model.JournalRecords)
+    }
+</div>
+<div>
+    <a asp-action="Index" asp-route-streamId="@Model?.StreamId">Вернуться к списку учеников</a>
+</div>

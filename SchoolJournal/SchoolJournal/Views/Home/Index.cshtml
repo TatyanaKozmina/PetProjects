@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Школьный Журнал";
+}
+
+<div class="text-center">    
+    <h1 class="display-4">Оценки</h1>
+    @if (User.Identity.IsAuthenticated == false)
+    {
+        <p>Для доступа к дополнительной информации зайдите в свой аккаунт или зарегестрируйтесь.</p>
+    }
+    else
+    {
+        @await Html.PartialAsync("_Thanks")
+    }
+    <div style="position:relative;width:300px;height:300px;display:inline-block">
+        <img src="https://pngimg.com/uploads/star/star_PNG76856.png" 
+        style="width:100%; height:100%;object-fit:cover"/>
+    </div>
+</div>
