@@ -9,5 +9,6 @@ namespace SchoolJournal.Data.Repos
         Task<Pupil?> GetById(Guid? id);
         Task Update(Pupil pupil);
         Task Delete(Guid? id);
+        Task<List<Pupil>> Search(string searchCriteria);
     }
 }

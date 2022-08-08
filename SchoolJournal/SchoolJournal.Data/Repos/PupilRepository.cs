@@ -50,5 +50,12 @@ namespace SchoolJournal.Data.Repos
             _context.Entry(updatePupil).CurrentValues.SetValues(pupil);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<Pupil>> Search(string searchCriteria)
+        {
+            return await _context.Pupils
+                .Where(p => p.FirstName.Contains(searchCriteria) || p.LastName.Contains(searchCriteria))
+                .Include(p => p.Stream).ToListAsync();
+        }
     }
 }
