@@ -4,3 +4,11 @@
 
 /SchoolJournal/.vs
 /.vs
+/SchoolJournal/CustomLog/obj
+/SchoolJournal/CustomLog/bin/Debug/net6.0
+/SchoolJournal/SchoolJournal/obj
+/SchoolJournal/SchoolJournal/bin/Debug/net6.0
+/SchoolJournal/SchoolJournal.Data/obj
+/SchoolJournal/SchoolJournal.Data/bin/Debug/net6.0
+/SchoolJournal/SchoolJournal.Tests/bin/Debug/net6.0
+/SchoolJournal/SchoolJournal.Tests/obj

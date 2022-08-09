@@ -1,11 +1,5 @@
 ﻿@model IEnumerable<SchoolJournal.Models.DB.JournalRecord>
 
-@if (User.IsInRole("admin"))
-{
-    <p>
-        <a asp-action="AddMark" asp-route-pupilId="@Model.FirstOrDefault().PupilId">Добавить оценку</a>
-    </p>
-}
 <table class="table">
     <thead>
         <tr>

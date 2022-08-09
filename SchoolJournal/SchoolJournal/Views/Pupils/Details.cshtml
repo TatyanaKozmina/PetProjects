@@ -29,6 +29,12 @@
         </dd>
     </dl>
     <hr />
+    @if (User.IsInRole("admin"))
+    {
+        <p>
+            <a asp-action="AddMark" asp-route-pupilId="@Model.Id">Добавить оценку</a>
+        </p>
+    }
     @if (User.HasClaim(c => c.Type == System.Security.Claims.ClaimTypes.Email && c.Value == @Model.Email)
     || User.IsInRole("admin"))
     {

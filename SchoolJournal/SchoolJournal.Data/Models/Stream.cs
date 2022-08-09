@@ -12,7 +12,7 @@ namespace SchoolJournal.Models.DB
         [Display(Name = "Класс")]
         public int CurrentClass { get; set; }
         [Display(Name = "Поток закрыт")]
-        public bool IsCompleted { get; set; }
+        public bool IsCompleted { get; set; } = false;
         List<Pupil> Pupils { get; set; } = new List<Pupil>();
     }
 }
