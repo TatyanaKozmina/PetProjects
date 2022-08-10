@@ -14,7 +14,10 @@ namespace SchoolJournal.Data.Repos
 
         public async Task Create(Pupil pupil)
         {
-            pupil.Stream = _context.Streams.Where(s => s.Id == pupil.StreamId).FirstOrDefault();
+            var stream = _context.Streams.Where(s => s.Id == pupil.StreamId).FirstOrDefault();
+            if (stream == null)
+                throw new Exception("Pupil without assigned stream could not be created");
+            pupil.Stream = stream;
             pupil.Id = Guid.NewGuid();
             await _context.Pupils.AddAsync(pupil);
             await _context.SaveChangesAsync();
@@ -54,7 +57,7 @@ namespace SchoolJournal.Data.Repos
         public async Task<List<Pupil>> Search(string searchCriteria)
         {
             return await _context.Pupils
-                .Where(p => p.FirstName.Contains(searchCriteria) || p.LastName.Contains(searchCriteria))
+                .Where(p => p.FirstName.Contains(searchCriteria, StringComparison.OrdinalIgnoreCase) || p.LastName.Contains(searchCriteria, StringComparison.OrdinalIgnoreCase))
                 .Include(p => p.Stream).ToListAsync();
         }
     }
