@@ -34,3 +34,4 @@
 31. Исправлена ошибка NULL Reference
 32. Добавлены юнит тесты для SchoolJournal.Data: UserRepository и StreamRepository.
 33. Добавлены юнит тесты для SchoolJournal.Data: PupilRepository.
+34. Добавлены юнит тесты для SchoolJournal.Data: JournalRecordRepository.
