@@ -1,0 +1,11 @@
+C:\Users\tatya\source\repos\MSMQApp\bin\Debug\MSMQApp.exe.config
+C:\Users\tatya\source\repos\MSMQApp\bin\Debug\MSMQApp.exe
+C:\Users\tatya\source\repos\MSMQApp\bin\Debug\MSMQApp.pdb
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.csproj.AssemblyReference.cache
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.frmMSMQ.resources
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.Properties.Resources.resources
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.csproj.GenerateResource.cache
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.csproj.CoreCompileInputs.cache
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.exe
+C:\Users\tatya\source\repos\MSMQApp\obj\Debug\MSMQApp.pdb
